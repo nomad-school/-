@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Content</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@recogito/recogito-js@1.8.2/dist/recogito.min.css">
+    <style>
+        body {
+    font-family: "Source Han Serif CN VF", system-ui, -apple-system-thin, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 1.8;
+    letter-spacing: 0.1em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #3e3e3e;
+    background-color: #f9f9f9;
+}
+
+#editor-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.CodeMirror {
+    height: 400px;
+    border: 1px solid #ddd;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+#toolbar {
+    margin-top: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    margin-right: 10px;
+}
+
+/* Bold text style */
+strong, b {
+    font-weight: bold;
+    background-color: rgba(255, 204, 128, 0.5);
+    padding: 0 2px;
+    border-radius: 3px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+/* Underline style */
+u {
+    text-decoration: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 3'%3E%3Cpath fill='none' stroke='%23FF8C00' stroke-width='1.5' d='M 0 1.5 Q 1.25 0, 2.5 1.5 T 5 1.5 T 7.5 1.5 T 10 1.5'/%3E%3C/svg%3E");
+    background-position: 0 calc(100% - 1px);
+    background-repeat: repeat-x;
+    background-size: 10px 3px;
+    padding-bottom: 1px;
+}
+
+/* 斜体 */
+i, em {
+    font-style: normal; /* 取消斜体效果 */
+    text-decoration: none;
+    display: inline-block; /* 确保背景图能正确显示 */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 3'%3E%3Cpath fill='none' stroke='%23FF8C00' stroke-width='1.5' d='M 0 1.5 Q 1.25 0, 2.5 1.5 T 5 1.5 T 7.5 1.5 T 10 1.5'/%3E%3C/svg%3E");
+    background-position: 0 calc(100% - 1px);
+    background-repeat: repeat-x;
+    background-size: 10px 3px;
+    padding-bottom: 1px;
+}
+
+/* Link style */
+a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* 响应式设计 */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    .CodeMirror {
+        height: 300px;
+    }
+}
+
+.highlight {
+    background-color: rgb(185, 237, 139);
+    transition: background-color 1.5s;
+}
+    </style>
+</head>
+<body>
+    <div id="content">
+        <p>马援字文渊，扶风茂陵人也。其先赵奢为赵将，号曰马服君，子孙因为氏。 武帝时，以吏二千石自邯郸徙焉。 援年十二而孤，少有大志，诸兄奇之……后为<span class="r6o-annotation" data-id="#d2d5ca76-80e6-4c05-9bdf-1c81b90c2fdf">郡督邮</span>，送囚至<span class="r6o-annotation" data-id="#154453d7-1aed-4b2c-9108-19b44e38de4d">司命府</span>，囚有重罪，援哀<span class="r6o-annotation" data-id="#942c61e3-90cb-4a9d-adcd-17feee554548">而纵之</span>，遂亡命<span class="r6o-annotation" data-id="#25f440c7-8fcd-44fc-89a3-4d18bc056053">北地</span>。 遇<span class="r6o-annotation" data-id="#9e41db0b-7df7-4451-bbd7-842e6ee8a3b7">赦</span>，因留牧畜，<span class="r6o-annotation" data-id="#86c8024d-733e-4b4c-b91b-1bd8e50634bb">宾客</span>多归附者，遂<span class="r6o-annotation" data-id="#d0a60110-d8ef-45ab-be2e-980cf2022639">役属</span>数百家。 <span class="r6o-annotation" data-id="#3cceaab2-a6ea-45e9-900f-126e7fb3f906">转游陇汉间</span>，常谓宾客曰：“ <span class="r6o-annotation" data-id="#8f4034b5-0e44-4d42-8a0d-a175b3103aa9">丈夫为志，穷当益坚，老当益壮</span>。 ”因处田牧，至有牛马羊数千头，谷数万斛。 既而叹曰：“ 凡殖货财产，贵其能施赈也，否则守钱虏耳。 ”乃尽散以班<span class="r6o-annotation" data-id="#0a034e25-1e09-45cf-8dd2-fba1c38478dd">昆弟故旧</span>，身<span class="r6o-annotation" data-id="#d62c7543-ce12-47ff-ba0b-411ced303b16">衣</span>羊裘皮绔。</p><p>王莽末，四方兵起……是时<span class="r6o-annotation" data-id="#2bb9a7f4-1d26-4b86-90be-fa5294ec6ad8">公孙述</span>称帝于蜀，<span class="r6o-annotation" data-id="#e076da02-dcf9-4130-b375-25ccc4057692">嚣</span>使援往观之。 援素与述同里闬，相善，以为既至当握手欢如平生，而述盛陈陛卫，以延援入，交拜礼毕，使出就馆，更为援制都布单衣、交让冠，会百官于宗庙中，立旧交之位。 述鸾旗旄骑，警跸就车，磬折而入，礼飨官属甚盛，欲授援以封侯大将军位。 宾客皆乐留，援晓之曰：“ 天下雄雌未定，公孙不吐哺走迎国士，与图成败，反修饰边幅，如偶人形。 此子何足久稽天下士乎?”因辞归，谓嚣曰：“ 子阳井底蛙耳，而妄自尊大，不如专意东方。 ”</p><p>建武四年冬，嚣使援奉书洛阳。 援至，引见于宣德殿。 世祖迎笑谓援曰：“ 卿遨游二帝间，今见卿，使人大惭。 ”援顿首辞谢，因曰：“ 当今之世，非独君择臣也，臣亦择君矣。 臣与公孙述同县，少相善。 臣前至蜀，述陛戟而后进臣。 臣今远来，陛下何知非刺客奸人，而简易若是？ ”帝复笑曰：“ 卿非刺客，顾说客耳。 ”援曰：“ 天下反复，盗名字者不可胜数。 今见陛下，恢廓大度，同符高祖，乃知帝王自有真也。 ”帝甚壮之。</p><p>隗嚣与援共卧起，问以东方流言及京师得失……嚣曰：“ 卿谓何如高帝？ ”援曰：“ 不如也。 高帝无可无不可； 今上好吏事，动如节度，又不喜饮酒。 ”嚣意不怿，曰：“ 如卿言，反复胜邪？ ”然雅信援，故遂遣长子恂入质。 援因将家属随恂归洛阳。 居数月而无它职任。 援以三辅地旷土沃，而所将宾客猥多，乃上书求屯田上林苑中，帝许之。</p><svg class="r6o-relations-layer readonly"></svg>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@recogito/recogito-js@1.8.2/dist/recogito.min.js"></script>
+    <script>
+        const annotations = [{"@context":"http://www.w3.org/ns/anno.jsonld","type":"Annotation","body":[{"type":"TextualBody","value":"郡里在太守之下的官员。马援这个时候在王莽建立的新朝做这个官职。","purpose":"commenting"}],"target":{"selector":[{"type":"TextQuoteSelector","exact":"郡督邮"},{"type":"TextPositionSelector","start":70,"end":73}]},"id":"#d2d5ca76-80e6-4c05-9bdf-1c81b90c2fdf"},{"@context":"http://www.w3.org/ns/anno.jsonld","type":"Annotation","body":[{"type":"TextualBody","value":"王莽时代朝廷里掌管刑法的机关","purpose":"commenting"}],"target":{"selector":[{"type":"TextQuoteSelector","exact":"司命府"},{"type":"TextPositionSelector","start":77,"end":80}]},"id":"#154453d7-1aed-4b2c-9108-19b44e38de4d"},{"@context":"http://www.w3.org/ns/anno.jsonld","type":"Annotation","body":[{"type":"TextualBody","value":"是放纵、放他逃走的意思吗？","purpose":"commenting"}],"target":{"selector":[{"type":"TextQuoteSelector","exact":"而纵之"},{"type":"TextPositionSelector","start":88,"end":91}]},"id":"#942c61e3-90cb-4a9d-adcd-17feee554548"},{"@context":"http://www.w3.org/ns/anno.jsonld","type":"Annotation","body":[{"type":"TextualBody","value":"秦汉时期的一个郡，大致在今天的宁夏。","purpose":"commenting"}],"target":{"selector":[{"type":"TextQuoteSelector","exact":"北地"},{"type":"TextPositionSelector","start":95,"end":97}]},"id":"#25f440c7-8fcd-44fc-89a3-4d18bc056053"},{"@context":"http://www.w3.org/ns/anno.jsonld","type":"Annotation","body":[{"type":"TextualBody","value":"赦免。","purpose":"commenting"}],"target":{"selector":[{"type":"TextQuoteSelector","exact":"赦"},{"type":"TextPositionSelector","start":100,"end":101}]},"id":"#9e41db0b-7df7-4451-bbd7-842e6ee8a3b7"},{"@context":"http://www.w3.org/ns/anno.jsonld","type":"Annotation","body":[{"type":"TextualBody","value":"马援家世代都在做官，几个哥哥也都是太守一级的官员。所以，他们家的“宾客”，你觉得是什么样的人呢？","purpose":"commenting"}],"target":{"selector":[{"type":"TextQuoteSelector","exact":"宾客"},{"type":"TextPositionSelector","start":107,"end":109}]},"id":"#86c8024d-733e-4b4c-b91b-1bd8e50634bb"},{"@context":"http://www.w3.org/ns/anno.jsonld","type":"Annotation","body":[{"type":"TextualBody","value":"豪强","purpose":"commenting"}],"target":{"selector":[{"type":"TextQuoteSelector","exact":"役属"},{"type":"TextPositionSelector","start":115,"end":117}]},"id":"#d0a60110-d8ef-45ab-be2e-980cf2022639"},{"@context":"http://www.w3.org/ns/anno.jsonld","type":"Annotation","body":[{"type":"TextualBody","value":"是囚犯“游陇汉间”吗","purpose":"commenting"}],"target":{"selector":[{"type":"TextQuoteSelector","exact":"转游陇汉间"},{"type":"TextPositionSelector","start":122,"end":127}]},"id":"#3cceaab2-a6ea-45e9-900f-126e7fb3f906"},{"@context":"http://www.w3.org/ns/anno.jsonld","type":"Annotation","body":[{"type":"TextualBody","value":"老骥伏枥，志在千里； 烈士暮年，壮心不已。","purpose":"commenting"}],"target":{"selector":[{"type":"TextQuoteSelector","exact":"丈夫为志，穷当益坚，老当益壮"},{"type":"TextPositionSelector","start":136,"end":150}]},"id":"#8f4034b5-0e44-4d42-8a0d-a175b3103aa9"},{"@context":"http://www.w3.org/ns/anno.jsonld","type":"Annotation","body":[{"type":"TextualBody","value":"“昆弟”就是“兄弟”。“故旧”会是刚才提过的什么人吗？","purpose":"commenting"}],"target":{"selector":[{"type":"TextQuoteSelector","exact":"昆弟故旧"},{"type":"TextPositionSelector","start":207,"end":211}]},"id":"#0a034e25-1e09-45cf-8dd2-fba1c38478dd"},{"@context":"http://www.w3.org/ns/anno.jsonld","type":"Annotation","body":[{"type":"TextualBody","value":"这个“衣”，读作 yì 。","purpose":"commenting"}],"target":{"selector":[{"type":"TextQuoteSelector","exact":"衣"},{"type":"TextPositionSelector","start":213,"end":214}]},"id":"#d62c7543-ce12-47ff-ba0b-411ced303b16"},{"@context":"http://www.w3.org/ns/anno.jsonld","type":"Annotation","body":[{"type":"TextualBody","value":"公孙述，是马援的老朋友，原来也是王莽朝廷的官员。但是王莽的新朝日渐不得人心，天下动荡，这让公孙述的野心变得越来越大。","purpose":"commenting"}],"target":{"selector":[{"type":"TextQuoteSelector","exact":"公孙述"},{"type":"TextPositionSelector","start":231,"end":234}]},"id":"#2bb9a7f4-1d26-4b86-90be-fa5294ec6ad8"},{"@context":"http://www.w3.org/ns/anno.jsonld","type":"Annotation","body":[{"type":"TextualBody","value":"此人名叫隗嚣，也是王莽的官吏，此时割据西北。洛阳有刘秀称帝，蜀地有公孙述称帝，他自己还不想称帝，因此需要选择一方依附。马援东奔西走，就是为他去办此事。","purpose":"commenting"}],"target":{"selector":[{"type":"TextQuoteSelector","exact":"嚣"},{"type":"TextPositionSelector","start":239,"end":240}]},"id":"#e076da02-dcf9-4130-b375-25ccc4057692"}];
+        window.onload = function() {
+            const r = Recogito.init({
+                content: 'content',
+                mode: 'view'
+            });
+            r.setAnnotations(annotations);
+        }
+    </script>
+</body>
+</html>
+            
